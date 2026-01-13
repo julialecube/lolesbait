@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>lolesbait</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrap header">
+    <div>
+      <div class="brand">lolesbait</div>
+      <p class="sub">Accés ràpid a contingut “privat”. Últim pas: confirmar.</p>
+    </div>
+    <div class="hint">v1.0</div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2 style="margin:0 0 10px;">Galeria</h2>
+      <p class="sub" style="margin:0 0 14px;">Obre una imatge i prova de descarregar-la.</p>
+
+      <div class="grid">
+        <button class="thumb" data-src="img/01.jpg" data-name="01.jpg"><img src="img/01.jpg" alt="Imatge 1"></button>
+        <button class="thumb" data-src="img/02.jpg" data-name="02.jpg"><img src="img/02.jpg" alt="Imatge 2"></button>
+        <button class="thumb" data-src="img/03.jpg" data-name="03.jpg"><img src="img/03.jpg" alt="Imatge 3"></button>
+        <button class="thumb" data-src="img/04.jpg" data-name="04.jpg"><img src="img/04.jpg" alt="Imatge 4"></button>
+        <button class="thumb" data-src="img/05.jpg" data-name="05.jpg"><img src="img/05.jpg" alt="Imatge 5"></button>
+        <button class="thumb" data-src="img/06.png" data-name="06.png"><img src="img/06.png" alt="Imatge 6"></button>
+        <button class="thumb" data-src="img/07.webp" data-name="07.webp"><img src="img/07.webp" alt="Imatge 7"></button>
+      </div>
+
+      <div class="viewer" id="viewer" hidden>
+        <div class="viewerTop">
+          <div class="viewerTitle">Imatge oberta: <span id="currentName">—</span></div>
+          <a class="btn" href="casi.html">Últim pas</a>
+        </div>
+
+        <img id="bigImg" class="big" alt="Imatge oberta" />
+
+        <div class="row">
+          <a href="#viewer" class="btn" id="sameLink">Veure resultats</a>
+          <button class="btn" id="moveBtn">Clica aquí (fàcil)</button>
+          <button class="btn" id="loadBtn">Carregar contingut</button>
+          <button class="btn" id="dlBtn">Descarregar</button>
+        </div>
+
+        <div class="status" id="status"></div>
+
+        <!-- Loading infinit -->
+        <div class="loader" id="loader" hidden>
+          <div class="spinner"></div>
+          <div class="loaderText" id="loaderText">Carregant…</div>
+          <button class="btn tiny" id="cancelFake">Cancel·lar</button>
+        </div>
+
+        <!-- Progrés 99% -->
+        <div class="progressWrap" id="progressWrap" hidden>
+          <div class="progressTop">
+            <div class="small" id="progressLabel">Descarregant…</div>
+            <div class="small" id="progressPct">0%</div>
+          </div>
+          <div class="track"><div class="bar" id="progressBar" style="width:0%"></div></div>
+          <div class="small" id="progressNote">—</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 style="margin:0 0 10px;">La resposta està més avall</h2>
+      <p class="sub" style="margin:0 0 14px;">Segueix fent scroll.</p>
+      <div class="void" id="void">
+        <p class="sub" id="voidMsg" style="margin:0;">Encara més avall.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap" style="padding-bottom:40px;">
+    <p class="small" style="margin:0;">lolesbait — promesa eterna: sempre estàs a un pas.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
